@@ -4,7 +4,7 @@ nav {
   color: #FFFFff;
   height: 120px;
   width: 100%;
-  z-index: auto;
+  z-index: 2;
   padding: 1.5em;
 }
 
