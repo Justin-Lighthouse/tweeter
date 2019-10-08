@@ -14,12 +14,14 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -42,6 +44,18 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form>
+          <textarea id="myTextbox" name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter"></span>
+        </form>
+      </section>
+
+      <article class="tweet-container">
+        
+      </article>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacinia at quis risus sed vulputate odio. A erat nam at lectus urna duis. Ac tortor dignissim convallis aenean. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. In aliquam sem fringilla ut morbi tincidunt augue interdum velit. Gravida rutrum quisque non tellus orci ac. Aenean pharetra magna ac placerat vestibulum lectus mauris ultrices. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut aliquam purus sit amet luctus venenatis lectus magna. Ut consequat semper viverra nam. Aliquet bibendum enim facilisis gravida neque convallis a cras semper. Suscipit adipiscing bibendum est ultricies integer quis. Netus et malesuada fames ac turpis egestas sed. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Cras semper auctor neque vitae tempus quam. Dis parturient montes nascetur ridiculus.
 
           Sed turpis tincidunt id aliquet risus feugiat. Viverra justo nec ultrices dui sapien eget. Aenean sed adipiscing diam donec adipiscing tristique risus. Ac turpis egestas sed tempus urna et pharetra pharetra. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus. Senectus et netus et malesuada fames ac turpis. Nullam non nisi est sit amet facilisis magna. Justo donec enim diam vulputate ut pharetra sit. Malesuada fames ac turpis egestas maecenas. Integer enim neque volutpat ac tincidunt vitae semper.
