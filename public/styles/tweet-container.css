@@ -2,17 +2,17 @@
   margin-top: 10px;
 }
 
-article {
+.tweet {
   padding: 20px;
   border: 3px solid black;
 }
 
-article > header {
+.tweet > header {
   display: flex;
   align-items: center;
 }
 
-article:hover {
+.tweet:hover {
   box-shadow: 5px 5px 0 #888;
 }
 
@@ -21,7 +21,7 @@ article:hover {
   visibility: hidden;
 }
 
-article:hover > header > .name.handle {
+.tweet:hover > header > .name.handle {
   visibility: visible;
 }
 
