@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -28,11 +29,11 @@
 
     <!-- Top nav bar (fixed) -->
     <nav class="fixed">
-      <span>tweeter</span>
+      <span class="tweeter">tweeter</span>
     </nav>
 
     <!-- header with name and avatar -->
-    <header>
+    <header class="avatar">
         <div>
             <img class="centered" src="/images/profile-hex.png"> 
         </div>
@@ -45,26 +46,27 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form>
           <textarea id="myTextbox" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
-          <span class="counter"></span>
+          <span class="counter">140</span>
         </form>
       </section>
 
-      <article class="tweet-container">
-        
-      </article>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacinia at quis risus sed vulputate odio. A erat nam at lectus urna duis. Ac tortor dignissim convallis aenean. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. In aliquam sem fringilla ut morbi tincidunt augue interdum velit. Gravida rutrum quisque non tellus orci ac. Aenean pharetra magna ac placerat vestibulum lectus mauris ultrices. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ut aliquam purus sit amet luctus venenatis lectus magna. Ut consequat semper viverra nam. Aliquet bibendum enim facilisis gravida neque convallis a cras semper. Suscipit adipiscing bibendum est ultricies integer quis. Netus et malesuada fames ac turpis egestas sed. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Cras semper auctor neque vitae tempus quam. Dis parturient montes nascetur ridiculus.
-
-          Sed turpis tincidunt id aliquet risus feugiat. Viverra justo nec ultrices dui sapien eget. Aenean sed adipiscing diam donec adipiscing tristique risus. Ac turpis egestas sed tempus urna et pharetra pharetra. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus. Senectus et netus et malesuada fames ac turpis. Nullam non nisi est sit amet facilisis magna. Justo donec enim diam vulputate ut pharetra sit. Malesuada fames ac turpis egestas maecenas. Integer enim neque volutpat ac tincidunt vitae semper.
-          
-          Eu non diam phasellus vestibulum. At risus viverra adipiscing at in tellus integer. Proin nibh nisl condimentum id. Sed sed risus pretium quam vulputate dignissim suspendisse in. Justo nec ultrices dui sapien eget. Ornare arcu odio ut sem. Fusce ut placerat orci nulla pellentesque dignissim enim sit. Varius duis at consectetur lorem donec massa sapien. Bibendum est ultricies integer quis auctor. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Sit amet purus gravida quis blandit turpis cursus in.
-          
-          Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Sed arcu non odio euismod lacinia at quis risus sed. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget. Nec dui nunc mattis enim ut tellus elementum sagittis. Ut morbi tincidunt augue interdum velit euismod. Ipsum dolor sit amet consectetur. Amet mattis vulputate enim nulla. Facilisis mauris sit amet massa vitae tortor. Faucibus pulvinar elementum integer enim. Nulla facilisi nullam vehicula ipsum a arcu. Elit eget gravida cum sociis natoque penatibus et.
-          
-          Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Scelerisque fermentum dui faucibus in ornare quam viverra. Lorem mollis aliquam ut porttitor leo. Vulputate sapien nec sagittis aliquam. Viverra vitae congue eu consequat ac felis donec et. Vestibulum mattis ullamcorper velit sed. Congue nisi vitae suscipit tellus mauris a diam maecenas sed. Urna nec tincidunt praesent semper. Tellus id interdum velit laoreet. Faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper eget. Ornare quam viverra orci sagittis eu volutpat odio facilisis. Ut lectus arcu bibendum at varius vel. Etiam tempor orci eu lobortis elementum nibh. Lacus suspendisse faucibus interdum posuere lorem ipsum.</p>
+      <section id="tweets-container">
+        <article>
+          <header>
+            <img class="avatars" src="https://i.imgur.com/nlhLi3I.png">
+            <span class="name">Newton</span>
+            <span class="name handle">@Lazzeri</span>
+          </header>
+          <p class="content">Lorem ipsum dolor sit amet</p>
+          <footer class="tweet-footer">
+            <span class="created_at" >Date</span>
+            <span class="flags">LIKE ME!!!</span>
+          </footer>
+        </article>
+      </section>
     </main>
 
   </body>

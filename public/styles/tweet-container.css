@@ -1,0 +1,39 @@
+.tweet-container {
+  margin-top: 10px;
+}
+
+article {
+  padding: 20px;
+  border: 3px solid black;
+}
+
+article > header {
+  display: flex;
+  align-items: center;
+}
+
+article:hover {
+  box-shadow: 5px 5px 0 #888;
+}
+
+.name.handle {
+  margin-left: auto;
+  visibility: hidden;
+}
+
+article:hover > header > .name.handle {
+  visibility: visible;
+}
+
+.content {
+  border-bottom: 2px solid black;
+}
+
+.tweet-footer {
+  padding: 0 5px 5px 5px;
+  font-size: 50%;
+}
+
+.flags {
+  float: right;
+}
