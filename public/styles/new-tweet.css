@@ -9,6 +9,17 @@ textarea {
   resize: none;
 }
 
+form {
+  display: none;
+}
+
+.alert {
+  display: none;
+  color: red;
+  border: 1px solid red;
+  text-align: center;
+}
+
 .counter {
   float: right;
 }

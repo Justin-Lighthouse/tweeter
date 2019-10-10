@@ -30,6 +30,7 @@
     <!-- Top nav bar (fixed) -->
     <nav class="fixed">
       <span class="tweeter">tweeter</span>
+      <button id="toggle">Write a new tweet below</button>
     </nav>
 
     <!-- header with name and avatar -->
@@ -46,27 +47,18 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form>
+        <form id="newTweet" action="/tweets" method="POST">
+          <div class="alert alert-danger" role="alert">
+            Something went wrong, either your tweet is blank or exceeds the character amount!
+          </div>
           <textarea id="myTextbox" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
-
-      <section id="tweets-container">
-        <article class="tweet">
-          <header>
-            <img class="avatars" src="https://i.imgur.com/nlhLi3I.png">
-            <span class="name">Newton</span>
-            <span class="name handle">@Lazzeri</span>
-          </header>
-          <p class="content">Lorem ipsum dolor sit amet</p>
-          <footer class="tweet-footer">
-            <span class="created_at" >Date</span>
-            <span class="flags">LIKE ME!!!</span>
-          </footer>
-        </article>
-      </section>
+      <div id="result">
+        <section id="tweets-container"></section>
+      </div>
     </main>
 
   </body>
