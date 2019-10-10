@@ -23,6 +23,7 @@
 @media only screen and (min-width: 769px) {
   .avatar {
     height: 400px;
+    /* width: 400px; */
     background-color: #00ffac;
     background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
   }

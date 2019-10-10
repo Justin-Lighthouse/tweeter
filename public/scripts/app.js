@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-  
   const renderTweets = function(tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
@@ -14,16 +13,19 @@ $(document).ready(function() {
     }
   }
 
+  //slide toggles the compose tweet form
   $("#toggle").click(function() {
     $("#newTweet").slideToggle( "slow" );
   });
 
+  //keeps text safe, removes chance of users creating tweets that execute scripts
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
   
+  //takes the input given and puts it into html format so it can be seen in a tweet format
   const createTweetElement = function(tweet) {
     let $tweet = $('<article>').addClass('tweet');
   
@@ -45,6 +47,7 @@ $(document).ready(function() {
     return $tweet;
   }
 
+  //renders the tweets list without having to refresh the page
   const loadTweets = function() {
     $.ajax('/tweets', {method: "GET"})
     .then((res) => {
@@ -54,6 +57,8 @@ $(document).ready(function() {
 
   loadTweets();
 
+  //on submit from the form send the text to /tweets, also checks for no message and a message that's too long.
+  //after submission, it then reloads all tweets so the user doesn't need to refresh the page.
   $('#newTweet').submit(function(event) {
     event.preventDefault();
     if($($('#myTextbox')).val().length === 0) {
