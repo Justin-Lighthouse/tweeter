@@ -23,6 +23,10 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <!-- disable viewport zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
   </head>
 
   <body>
@@ -34,32 +38,35 @@
     </nav>
 
     <!-- header with name and avatar -->
-    <header class="avatar">
-        <div>
-            <img class="centered" src="/images/profile-hex.png"> 
-        </div>
-        <br>
-        <div>
-            <h2>Your Name</h2>
-        </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <form id="newTweet" action="/tweets" method="POST">
-          <div class="alert alert-danger" role="alert">
-            Something went wrong, either your tweet is blank or exceeds the character amount!
+    
+    <div class="computer">
+        <header class="avatar">
+            <div>
+                <img class="centered" src="/images/profile-hex.png"> 
+            </div>
+            <br>
+            <div>
+                <h2>Your Name</h2>
+            </div>
+        </header>
+    
+        <!-- Page-specific (main) content here -->
+        <main class="container">
+          <section class="new-tweet">
+            <form id="newTweet" action="/tweets" method="POST">
+              <div class="alert alert-danger" role="alert">
+                Something went wrong, either your tweet is blank or exceeds the character amount!
+              </div>
+              <textarea id="myTextbox" name="text" placeholder="What are you humming about?"></textarea>
+              <input type="submit" value="Tweet">
+              <span class="counter">140</span>
+            </form>
+          </section>
+          <div id="result">
+            <section id="tweets-container"></section>
           </div>
-          <textarea id="myTextbox" name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </form>
-      </section>
-      <div id="result">
-        <section id="tweets-container"></section>
-      </div>
-    </main>
+        </main>
+    </div>
 
   </body>
 </html>

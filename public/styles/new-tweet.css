@@ -14,9 +14,10 @@ form {
 }
 
 .alert {
+  margin: 5px;
   display: none;
   color: red;
-  border: 1px solid red;
+  border: 2px solid red;
   text-align: center;
 }
 

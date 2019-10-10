@@ -9,11 +9,9 @@ $(document).ready(function() {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-
     for (const tweet of tweets) {
       $("#tweets-container").prepend(createTweetElement(tweet))
     }
-    // $('#tweets-container').prepend(tweets.map(tweet => createTweetElement(tweet)));
   }
 
   $("#toggle").click(function() {
@@ -31,7 +29,7 @@ $(document).ready(function() {
   
     $($tweet).html(
     `<article>
-      <header>
+      <header class="accountInfo">
         <img class="avatars" src=${tweet.user.avatars}>
         <span class="name">${tweet.user.name}</span>
         <span class="name handle">${tweet.user.handle}</span>
@@ -46,6 +44,15 @@ $(document).ready(function() {
   
     return $tweet;
   }
+
+  const loadTweets = function() {
+    $.ajax('/tweets', {method: "GET"})
+    .then((res) => {
+      renderTweets(res);
+    })
+  };
+
+  loadTweets();
 
   $('#newTweet').submit(function(event) {
     event.preventDefault();
@@ -70,12 +77,4 @@ $(document).ready(function() {
     }
   })
 
-  const loadTweets = function() {
-    $.ajax('/tweets', {method: "GET"})
-    .then((res) => {
-      renderTweets(res);
-    })
-  };
-
-  loadTweets();
 });
