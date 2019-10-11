@@ -25,6 +25,7 @@
   
   .content {
     border-bottom: 2px solid black;
+    word-wrap: break-word;
   }
   
   .tweet-footer {
@@ -64,6 +65,7 @@
   
   .content {
     border-bottom: 2px solid black;
+    word-wrap: break-word;
   }
   
   .tweet-footer {
@@ -75,3 +77,4 @@
     float: right;
   }
 }
+

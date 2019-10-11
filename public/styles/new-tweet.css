@@ -25,6 +25,11 @@ form {
   float: right;
 }
 
+.tooBig {
+  float: right;
+  color: red;
+}
+
 [type="submit"] {
   background-color: #4056A1;
   color: whitesmoke;
