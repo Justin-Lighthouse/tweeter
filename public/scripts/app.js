@@ -39,7 +39,11 @@ $(document).ready(function() {
       <p class="content">${escape(tweet.content.text)}</p>
       <footer class="tweet-footer">
         <span class="created_at" >${tweet.created_at}</span>
-        <span class="flags">LIKE ME!!!</span>
+        <div class="flags">
+          <span class="fas fa-flag"></i>
+          <span class="fas fa-retweet"></i>
+          <span class="fas fa-thumbs-up"></i>
+        </div>
       </footer>
     </article>`
     );

@@ -34,7 +34,12 @@
   }
   
   .flags {
+    visibility: hidden;
     float: right;
+  }
+
+  .tweet:hover > article > footer > .flags{
+    visibility: visible;
   }
 }
 
@@ -74,7 +79,12 @@
   }
   
   .flags {
+    visibility: hidden;
     float: right;
+  }
+
+  .tweet:hover > article > footer > .flags{
+    visibility: visible;
   }
 }
 
