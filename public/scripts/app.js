@@ -16,6 +16,7 @@ $(document).ready(function() {
   //slide toggles the compose tweet form
   $("#toggle").click(function() {
     $("#newTweet").slideToggle( "slow" );
+    document.getElementById("myTextbox").focus();
   });
 
   //keeps text safe, removes chance of users creating tweets that execute scripts
