@@ -43,4 +43,8 @@ main {
     margin-top: 130px;
     justify-content: space-evenly;
   }
+  
+  .result {
+    max-width: 600px;
+  }
 }
