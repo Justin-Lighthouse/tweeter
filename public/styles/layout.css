@@ -44,7 +44,7 @@ main {
     justify-content: space-evenly;
   }
   
-  .result {
+  #result {
     max-width: 600px;
   }
 }
